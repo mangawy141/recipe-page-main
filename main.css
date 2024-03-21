@@ -1,0 +1,241 @@
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+  /* fonts */
+  --young-serif: "Young Serif", serif;
+  --Outfit: "Outfit", sans-serif;
+  /* other components */
+  --main-radius: 8px;
+  --section-margin: 18px;
+  --ul-margin: 10px 0px 0px 20px;
+  --li-margin: 15px 0 0 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--Eggshell);
+  height: 100vh;
+}
+/* starting media queries */
+@media (min-width: 576px) {
+  .container {
+    width: 450px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 850px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    width: 1200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* ending media queries */
+/*starting components */
+.container {
+  margin-inline : auto;
+  background-color: white;
+  border-radius: var(--main-radius);
+  display: grid;
+  place-items: center;
+  padding: 30px;
+}
+.section2,
+.section3,
+.section4,
+.section5 {
+  width: 100%;
+}
+
+ul li {
+  margin: var(--li-margin);
+  list-style-type: none;
+  position: relative;
+  color: var(--Wenge-Brown);
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: -28px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.head1 {
+  font-family: var(--young-serif);
+}
+.para {
+  color: var(--Wenge-Brown);
+  font-family: var(--Outfit);
+  font-size: 16px;
+}
+/*ending components */
+.card-upper-part {
+  margin-bottom: var(--section-margin);
+}
+.card-upper-part .image {
+  overflow: hidden;
+  border-radius: var(--main-radius);
+  /* background-image: url(/assets/images/image-omelette.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover; */
+}
+.card-upper-part .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-upper-part .head1 {
+  color: var(--Dark-Charcoal);
+
+  font-size: 40px;
+}
+
+.section2 {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--Rose-White);
+  font-family: var(--Outfit);
+  border-radius: var(--main-radius);
+  margin-bottom: var(--section-margin);
+}
+
+.section2 .head1 {
+  color: var(--Dark-Raspberry);
+  font-family: var(--Outfit);
+}
+.section2 ul {
+  margin: var(--ul-margin);
+}
+
+.section2 ul li::before {
+  background-color: var(--Dark-Raspberry);
+  position: absolute;
+  top: 50%;
+  left: -28px;
+}
+.section2 ul li span {
+  font-weight: 600;
+}
+
+.section3 {
+  margin-bottom: var(--section-margin);
+}
+hr {
+  background-color: var(--Light-Grey);
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin-top: var(--section-margin);
+}
+.section3 .head1 {
+  color: var(--Nutmeg);
+  font-size: 30px;
+}
+
+.section3 ul {
+  margin-top: var(--ul-margin);
+  padding-left: 15px;
+}
+
+.section3 ul li::before {
+  background-color: var(--Nutmeg);
+  position: absolute;
+  top: 50%;
+  left: -25px;
+}
+
+.section4 {
+  margin: var(--section-margin);
+}
+.section4 .head1 {
+  color: var(--Nutmeg);
+  font-size: 30px;
+}
+
+.section4 ul {
+  font-family: var(--Outfit);
+}
+.section4 ul li {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 18px;
+}
+.section4 ul li::marker {
+  color: var(--Nutmeg);
+  font-weight: bold;
+}
+.section4 ul li span {
+  font-weight: bold;
+}
+
+.section5 {
+  margin-bottom: var(--section-margin);
+}
+.section5 .head1 {
+  color: var(--Nutmeg);
+}
+.section5 table {
+  width: 100%;
+  margin-top: var(--section-margin);
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: var(--Outfit);
+  color: var(--Wenge-Brown);
+}
+.section5 table tr {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+.section5 table td {
+  padding: 12px;
+  text-align: left;
+}
+.section5 table td:nth-child(even) {
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
